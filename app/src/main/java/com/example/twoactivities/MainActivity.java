@@ -4,14 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.twoactivities.R;
+import com.example.twoactivities.SecondActivity;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String LOG_TAG = "";
     private TextView mShowCount;
     private int mCount = 0;
 
@@ -32,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void sayHello(View view) {
-        Intent intent = new Intent();
+        Log.d(LOG_TAG, "Say Hello clicked!");
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, mShowCount.toString());
+        startActivity(intent);
     }
 }
