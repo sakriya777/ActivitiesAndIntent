@@ -7,48 +7,48 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/text_header_reply"
+        android:id="@+id/show_count"
+        android:layout_width="153dp"
+        android:layout_height="270dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="186dp"
+        android:background="#FFFF00"
+        android:gravity="center_vertical"
+        android:text="@string/_0"
+        android:textAlignment="center"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="160sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/button_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/button_toast"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/first_activity"
-        android:textStyle="bold"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="48dp"
+        android:onClick="sayHello"
+        android:text="Say Hello"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button1"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="launchText1"
-        android:text="Text 1"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_header_reply" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="launchText2"
-        android:text="Text 2"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="launchText3"
-        android:text="Text 3"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:onClick="countUp"
+        android:text="@string/count"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button_toast"
+        app:layout_constraintVertical_bias="0.049" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
