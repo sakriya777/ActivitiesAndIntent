@@ -13,7 +13,7 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-        TextView textView = findViewById(R.id.scrolltext);
+        TextView textView = findViewById(R.id.score);
         textView.setText(message);
     }
 }

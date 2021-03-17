@@ -1,4 +1,4 @@
-package com.example.hellotoastchallenge;
+package com.example.twoactivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,7 +16,8 @@ import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String LOG_TAG = "";
+    public static final String EXTRA_MESSAGE = "1";
+    private static final String LOG_TAG = MainActivity.class.getSimpleName();
     private TextView mShowCount;
     private int mCount = 0;
 
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     public void sayHello(View view) {
         Log.d(LOG_TAG, "Say Hello clicked!");
         Intent intent = new Intent(this, SecondActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, mShowCount.toString());
+        intent.putExtra(EXTRA_MESSAGE, ""+mCount);
         startActivity(intent);
     }
 }
